@@ -12,7 +12,7 @@ if (!isset($request['cidade'])) {
         "status" => false,
         "message" => 'Cidade de conexão não informada!'
     ]);
-    
+
     return;
 }
 
@@ -21,6 +21,7 @@ if (!isset($request['query'])) {
         "status" => false,
         "message" => 'Query SQL de execução não informada!'
     ]);
+    
     return;
 }
 
