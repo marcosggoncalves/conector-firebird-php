@@ -12,6 +12,7 @@ if (!isset($request['cidade'])) {
         "status" => false,
         "message" => 'Cidade de conexão não informada!'
     ]);
+    
     return;
 }
 
@@ -28,6 +29,7 @@ if (preg_match('~(delete|DELETE|insert|INSERT|update|UPDATE)~', $request['query'
         "status" => false,
         "message" => 'Query SQL não pode ser executada, comando proibido!'
     ]);
+
     return;
 }
 
@@ -39,6 +41,7 @@ if (!($conect = ibase_connect($hostname, $request['cidade']['user_db'], $request
         "message" => 'Erro de conexão com filial!',
         "error" =>  ibase_errmsg()
     ]);
+
     return;
 }
 
